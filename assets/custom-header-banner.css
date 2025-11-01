@@ -6,6 +6,34 @@ html, body {
   padding: 0 !important;
 }
 
+/* 重置body的grid布局，让内容可以重叠 */
+body {
+  display: block !important;
+  grid-template-rows: none !important;
+  min-height: 100vh !important;
+}
+
+/* 隐藏announcement bar，如果存在的话 */
+.shopify-section-group-header-group .announcement-bar {
+  display: none !important;
+}
+
+/* 让header-group绝对定位，浮在内容上方 */
+.shopify-section-group-header-group {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
+  background: transparent !important;
+}
+
+/* 确保main content从页面顶部开始 */
+.main-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
 /* 确保图片横幅section完全贴合页面顶部 */
 .shopify-section:first-child {
   margin-top: 0 !important;
