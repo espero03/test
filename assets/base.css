@@ -2092,6 +2092,7 @@ input[type='checkbox'] {
 /* utility-bar */
 .utility-bar {
   height: 100%;
+  background-color: transparent;
 }
 
 .utility-bar--bottom-border {
@@ -2343,7 +2344,7 @@ input[type='checkbox'] {
 .header-wrapper {
   display: block;
   position: relative;
-  background-color: rgb(var(--color-background));
+  background-color: transparent;
 }
 
 .header-wrapper--border-bottom {
@@ -2935,6 +2936,13 @@ details-disclosure > details {
   background: rgb(var(--color-background));
   background: var(--gradient-background);
   background-attachment: fixed;
+}
+
+/* Override gradient background for utility-bar and header-wrapper */
+.utility-bar.gradient,
+.header-wrapper.gradient {
+  background: transparent !important;
+  background-attachment: initial;
 }
 
 @media screen and (forced-colors: active) {
