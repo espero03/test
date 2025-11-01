@@ -1,0 +1,129 @@
+/* 自定义样式：让图片横幅作为header背景 */
+
+/* 让图片横幅固定在页面顶部作为背景 */
+.banner {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: -1 !important;
+  margin: 0 !important;
+}
+
+/* 确保图片横幅的媒体元素覆盖整个视口 */
+.banner__media {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.banner__media img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* 调整banner内容的位置，让它在header区域显示 */
+.banner__content {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: auto !important;
+  z-index: 10 !important;
+  padding-top: 12rem !important; /* 为header留出空间 */
+  max-height: 100vh !important;
+  overflow: visible !important;
+}
+
+/* 让header区域透明，显示背景图片 */
+.shopify-section-group-header-group {
+  position: relative !important;
+  z-index: 20 !important;
+  background: transparent !important;
+}
+
+/* 确保header wrapper透明 */
+.header-wrapper {
+  background: transparent !important;
+}
+
+/* 让页面主要内容区域向下偏移，避免被固定的图片横幅遮挡 */
+.main-content {
+  margin-top: 100vh !important;
+  position: relative !important;
+  z-index: 5 !important;
+  background: rgb(var(--color-background)) !important;
+  min-height: 100vh !important;
+}
+
+/* 特色产品区域样式调整 */
+.shopify-section:not(.shopify-section-group-header-group) {
+  position: relative !important;
+  z-index: 5 !important;
+  background: rgb(var(--color-background)) !important;
+}
+
+/* 确保特色产品section紧贴主内容区域 */
+.main-content .shopify-section:first-child {
+  margin-top: 0 !important;
+  padding-top: 4rem !important;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 749px) {
+  .banner__content {
+    padding-top: 8rem !important;
+  }
+  
+  .main-content {
+    margin-top: 100vh !important;
+  }
+  
+  .main-content .shopify-section:first-child {
+    padding-top: 2rem !important;
+  }
+}
+
+/* 平板和桌面端适配 */
+@media screen and (min-width: 750px) {
+  .banner__content {
+    padding-top: 15rem !important;
+  }
+}
+
+/* 大屏幕适配 */
+@media screen and (min-width: 1200px) {
+  .banner__content {
+    padding-top: 18rem !important;
+  }
+}
+
+/* 隐藏原始的section间距 */
+.section {
+  margin-top: 0 !important;
+}
+
+/* 确保banner内容在移动端也能正确显示 */
+.banner__box {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* 优化banner按钮在透明背景下的显示 */
+.banner__buttons .button {
+  backdrop-filter: blur(10px) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: rgb(var(--color-foreground)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.banner__buttons .button:hover {
+  background: rgba(255, 255, 255, 1) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
