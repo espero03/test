@@ -3627,7 +3627,7 @@ details-disclosure > details {
   top: 0;
   left: 0;
   right: 0;
-  z-index: -1;
+  z-index: 0;
   height: 250px;
   overflow: hidden;
   pointer-events: none;
@@ -3641,7 +3641,7 @@ details-disclosure > details {
 
 /* 确保主内容区域在横幅后面显示 */
 .header-with-banner #MainContent {
-  margin-top: 30px;
+  margin-top: 180px;
   position: relative;
   z-index: 1;
   background: white;
@@ -3684,6 +3684,6 @@ details-disclosure > details {
   }
   
   .header-with-banner #MainContent {
-    margin-top: 10px;
+    margin-top: 130px;
   }
 }
