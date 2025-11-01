@@ -5,7 +5,7 @@
   position: relative !important;
   top: 0 !important;
   left: 0 !important;
-  width: 100% !important;
+  width: 100vw !important;
   height: 100vh !important;
   z-index: 1 !important;
   margin: 0 !important;
@@ -13,7 +13,7 @@
 
 /* 确保图片横幅的媒体元素覆盖整个容器 */
 .banner__media {
-  position: absolute !important;
+  position: relative !important;
   top: 0 !important;
   left: 0 !important;
   width: 100% !important;
