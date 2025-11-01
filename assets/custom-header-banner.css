@@ -1,5 +1,17 @@
 /* 自定义样式：让图片横幅作为header背景 */
 
+/* 重置body和html的默认样式，消除顶部空白 */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 确保图片横幅section完全贴合页面顶部 */
+.shopify-section:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
 /* 让图片横幅作为页面顶部的背景，可以滚动 */
 .banner {
   position: relative !important;
@@ -9,6 +21,7 @@
   height: 100vh !important;
   z-index: 1 !important;
   margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* 确保图片横幅的媒体元素覆盖整个容器 */
