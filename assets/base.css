@@ -3639,6 +3639,20 @@ details-disclosure > details {
   padding-top: 100px;
 }
 
+/* 确保主内容区域在横幅后面显示 */
+.header-with-banner #MainContent {
+  margin-top: 180px;
+  position: relative;
+  z-index: 1;
+  background: white;
+}
+
+.header-with-banner .main-page-content,
+.header-with-banner .shopify-section {
+  position: relative;
+  z-index: 1;
+}
+
 /* Ensure header content visibility */
 .header-with-banner .header__heading,
 .header-with-banner .header__heading-link,
@@ -3667,5 +3681,9 @@ details-disclosure > details {
   
   .header-with-banner .banner__content {
     padding-top: 70px;
+  }
+  
+  .header-with-banner #MainContent {
+    margin-top: 130px;
   }
 }
