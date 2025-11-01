@@ -3641,7 +3641,7 @@ details-disclosure > details {
 
 /* 确保主内容区域在横幅后面显示 */
 .header-with-banner #MainContent {
-  margin-top: 180px;
+  margin-top: 30px;
   position: relative;
   z-index: 1;
   background: white;
@@ -3684,6 +3684,6 @@ details-disclosure > details {
   }
   
   .header-with-banner #MainContent {
-    margin-top: 130px;
+    margin-top: 10px;
   }
 }
